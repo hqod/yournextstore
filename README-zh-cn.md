@@ -68,7 +68,7 @@ YNS 与 [Stripe](https://stripe.com) 紧密整合，因此你需要有一个 Str
 
 一旦您准备好将产品销售给真实客户，就必须在 Stripe 中将**测试模式 (Test Mode)** 切换到**生产模式 (Production Mode)**，并生成新的凭据。
 
-> [!TIP]提示
+> [!提示]
 > 这个步骤将需要通过 Stripe 的额外验证，我们建议你即刻开始该步骤。
 
 ## 添加环境变量
