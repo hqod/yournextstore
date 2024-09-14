@@ -51,14 +51,14 @@ https://github.com/user-attachments/assets/64197310-29bd-4dd3-a736-1494340e20e8
 
 #### 安装 pnpm
 
-安装 pnpm 最简单的方法是通过 Node.js Corepack。在 YNS 文件夹中，运行以下命令：
+安装 pnpm 最简单的方法是通过 Node.js Corepack。在 YNS 文件夹中运行以下命令：
 
 ```bash
 corepack enable
 corepack install
 ```
 
-或者，根据此处的说明选择适合你的操作系统进行操作：[pnpm.io/installation](https://pnpm.io/installation)
+或者，请根据此处的说明选择适合你的操作系统进行操作：[pnpm.io/installation](https://pnpm.io/installation)
 
 ## 创建 Stripe 账户
 
@@ -68,7 +68,7 @@ YNS 与 [Stripe](https://stripe.com) 紧密整合，因此你需要有一个 Str
 
 一旦您准备好将产品销售给真实客户，就必须在 Stripe 中将**测试模式 (Test Mode)** 切换到**生产模式 (Production Mode)**，并生成新的凭据。
 
-> [!提示]
+> [!TIP]
 > 这个步骤将需要通过 Stripe 的额外验证，我们建议你即刻开始该步骤。
 
 ## 添加环境变量
@@ -134,7 +134,7 @@ Your Next Store 支持简单的变体产品。要创建带变体的产品，你�
 
 变体显示在产品页面上。变体可以有不同的价格、描述和图片。值得注意的是，为了获得最佳浏览体验，同一产品的所有变体的`类别`都应该相同。
 
-> [!NOTE]备注
+> [!NOTE]
 > 我们之后计划在内置的管理面板中添加编辑产品和变体的功能。如果你有任何想法或建议，请告诉我们！
 
 ## Stripe 网络钩子 (Webhooks)
@@ -143,7 +143,7 @@ Your Next Store 使用 Stripe 网络钩子处理来自 Stripe 的事件。目前
 
 网络钩子的端点是 `https://{YOUR_DOMAIN}/api/stripe-webhook`。唯一必需的事件是 `payment_intent.successed`。在 Stripe 中配置网络钩子后，将 `STRIPE_WEBHOOK_SECRET` 变量值设置为 Stripe 创建的密钥 (secret key)。
 
-> [!NOTE]备注
+> [!NOTE]
 > 我们之后计划为网络钩子中添加支持更多事件，以改善用户体验。
 
 ## Stripe 税务
@@ -157,7 +157,7 @@ Your Next Store 集成了 Stripe 税务的预览功能。要启用它，请将 `
 - 客户地址
 - 客户税号
 
-> [!WARNING]警告
+> [!WARNING]
 > 该功能仍处于早期阶段，可能存在不支持的极端情况。我们正在积极改进它，如果你遇到任何问题或有任何建议，请告诉我们！
 
 ## 生产部署
